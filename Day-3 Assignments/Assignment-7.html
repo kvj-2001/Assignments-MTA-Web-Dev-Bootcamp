@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment-7</title>
+	<style>
+		p{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h3>Gender</h3>
+	<input type="Radio" id="gender" name="gender" value="Female"/>Female
+	<input type="Radio" id="gender" name="gender" value="Male">Male
+	<br/>
+	<h3>Your Favourite sport:</h3>
+	<input type="checkbox" id="cricket" name="cricket">cricket
+	<input type="checkbox" id="kabbadi" name="kabbadi">kabbadi
+	<br/>
+	<br/>
+	<button onclick="readData()" >Submit</button>
+	<br/>
+	<br/>
+	<p id="gender"></p>
+	<p id="favsport"></p>
+	<script>
+		function readData() {
+			var gender=document.getElementById('gender').value;
+			document.getElementById("gender").innerHTML=gender;
+			
+			var cricket=document.getElementById('cricket');
+			var kabbadi=document.getElementById('kabbadi');
+			var res;
+			
+			console.log(cricket.checked,kabbadi.checked);
+
+			if(cricket.checked == true && kabbadi.checked == true) {
+				res='Circket, Kabbadi';
+			} else if(cricket.checked == false && kabbadi.checked == true) {
+				res='Kabbadi only';
+			} else if(cricket.checked == true && kabbadi.checked == false) {
+				res='Cricket Only';
+			} else {
+				res = 'None';
+			}
+
+			document.getElementById('favsport').innerHTML=res;
+
+		}
+	</script>
+</body>
+</html>
