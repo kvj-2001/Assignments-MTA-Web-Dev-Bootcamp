@@ -1,0 +1,28 @@
+<!-- Script inside the <body> tag -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Script inside the body</title>
+	</head>
+	<body>
+		<p>Date:</p>
+		<p1><p1 id="day"></p1></p1>
+		<p2>-<p2 id="month"></p2></p2>
+		<p3>-<p3 id="year"></p3></p3>
+		<p>Time:</p>
+		<p1><p1 id='hour'></p1></p1>
+		<p2>:<p2 id='min'></p2></p2>
+		<p3>:<p3 id='sec'></p3></p3>
+		<script>
+			var d = new Date();
+			document.getElementById("day").innerHTML=d.getDate();
+			document.getElementById("month").innerHTML = d.getMonth() +1;
+			document.getElementById("year").innerHTML = d.getFullYear();
+			document.getElementById("hour").innerHTML=d.getHours();
+			document.getElementById("min").innerHTML=d.getMinutes();
+			document.getElementById("sec").innerHTML=d.getSeconds();
+		//id="month" id="year"
+		</script>
+	</body>
+</html>
